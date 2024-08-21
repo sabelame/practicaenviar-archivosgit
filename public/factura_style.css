@@ -1,0 +1,407 @@
+html {
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins";
+  font-size: 14px;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+
+
+
+/****************************************/
+
+header {
+  background-color: #121212;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px;
+}
+
+.home-buscar {
+  justify-content: right;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.boton-menu {
+  width: 70px;
+  height: 70px;
+  background-color: #212121;
+  border: none;
+  cursor: pointer;
+}
+.boton-menu p{
+  font-family: 'Bebas Neue';
+  font-size: 23px;
+  font-weight: normal;
+  color: white;
+}
+
+.boton-menu span {
+  color: red;
+}
+
+
+.busqueda {
+  font-family: "Poppins";
+  font-size: 16px;
+  color: gray;
+  padding: 5px 5px 5px 30px;
+  background-image: url(../iconos/search.svg);
+  background-repeat: no-repeat;
+  background-color:#121212;
+  border: 1px solid gray;
+  border-radius: 10px;
+  margin-left: 20px;
+}
+
+.perfil {
+  justify-content: right;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-right: 20px;
+}
+
+.campanita {
+  cursor: pointer;
+  padding: 7px;
+  border-radius: 50%;
+}
+.campanita:hover {
+  background-color:#212121;
+}
+
+.avisos {
+  position: relative;
+  top: 13px;
+  left: 13px;
+  width: 20px;
+  height: 15px;
+  background-color: red;
+  color: white;
+  font-size: 10px;
+  align-content: center;
+  justify-content: center;
+  border: 2px solid #121212;
+  border-radius: 7px;
+  padding: 1px;
+}
+
+.img-perfil img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
+
+/*************************************/
+main {
+  display: flex;
+  gap: 40px;
+}
+
+.apartados-menu img {
+  width: 40px;
+  height: auto;
+}
+
+.apartados-menu li:first-child img {
+  width: 40px;
+  height: 25px;
+}
+
+
+.apartados-menu {
+  background-color: #212121;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70px;
+  height: 100%;
+  list-style: none;
+  gap: 30px;
+  padding-top: 30px;
+}
+
+.apartados-menu li:not(:nth-child(6)):hover {
+  background-color: #121212;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+
+.apartados-menu li:nth-child(4) {
+  background-color: #121212;
+  border-radius: 7px;
+}
+
+.apartados-menu li:nth-child(6) {
+  border-top: 2px solid white;
+  height: 5px;
+  width: 40px;
+}
+
+section {
+  margin: 50px;
+  padding: 30px;
+  height: 100%;
+  width:100%;
+  background-color: white;
+  box-shadow: 0px 0px 60px #5c5c5c;
+}
+
+.navegacion{
+  display:flex;
+  justify-content:space-between;
+}
+
+.navegacion h2{
+  font-family: "Bebas Neue";
+  font-size: 30px;
+  font-weight: normal;
+}
+
+
+
+.navegacion a{
+  text-align:right;
+  text-decoration:none;
+  font-family: "Poppins";
+  font-weight: normal;
+  color: white;
+  padding: 10px;
+  background-color: #212121;
+  border: 2px solid;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.navegacion a:hover{
+  background-color: red;
+}
+
+select {
+  font-family: "Poppins";
+  font-size: 14px;
+  width: 200px;
+  padding: 5px;
+}
+
+.customer-info {
+  display: flex;
+  gap: 75px;
+  margin-top: 20px;
+}
+
+.contenido {
+  display: flex;
+  gap: 300px;
+  margin-top: 50px;
+}
+
+.invoice {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+
+.invoice input {
+  float: right;
+  margin-left: 10px;
+  width: 200px;
+  padding: 5px;
+}
+
+.boton-enviar {
+  font-family: "Bebas neue";
+  font-size: 20px;
+  color: red;
+  align-self: center;
+  width: 100px;
+  padding: 5px;
+  background-color: white;
+  border: 2px solid red;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.boton-enviar:hover {
+  color: white;
+  background-color: red;
+  border: 2px solid red;
+}
+
+.contenedor-tabla {
+  padding: 50px;
+}
+
+.tabla {
+  width: 100%;
+}
+
+.tabla th {
+  border: 1px solid gray;
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+.tabla td {
+  border: 1px solid gray;
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+
+.bin:hover {
+  cursor: pointer;
+  background-color:darkgray;
+}
+.save:hover {
+  cursor: pointer;
+  background-color:darkgray;
+}
+.pencil2:hover {
+  cursor: pointer;
+  background-color:darkgray;
+}
+
+.archivos {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  border: 2px dotted gray;
+  color: gray;
+  margin-top: 30px;
+  font-size: 16px;
+}
+
+.contenedor-total {
+  display: flex;
+  justify-content: right;
+  margin-right: 20px;
+}
+
+.contenedor-total p {
+  margin: 5px;
+}
+
+.contenedor-total p:first-child {
+  font-weight: bolder;
+}
+
+.precio-FINAL {
+  text-decoration: underline;
+}
+
+.archivos button {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: bolder;
+  color: white;
+  padding: 2px;
+  margin-left: 5px;
+  background-color: #212121;
+  border: 2px solid white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.archivos button:hover {
+  color: white;
+  background-color: red;
+  border: 2px solid white;
+}
+
+
+
+.contenedor-Tfacturas{
+  border-top:1px solid gray;
+  margin: 0px 50px 50px 50px;;
+  padding-top: 30px;
+}
+
+.tabla-facturas {
+  width: 100%;
+}
+
+.tabla-facturas th{
+  border: 1px solid gray;
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+.tabla-facturas td{
+  border: 1px solid gray;
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+.filtros-tabla{
+  margin: 20px 50px 10px;
+  padding: 20px;
+  width:80%;
+  display: flex;
+  gap:20px;
+  align-self:center;
+}
+
+.filtros-tabla article:target a {
+  color: white;
+  background-color: red;
+  border: 1px solid red;
+  border-radius: 4px;
+}
+
+.filtros-tabla article:hover a{
+  color: white;
+  background-color: #212121;
+  border: 1px solid #212121;
+  border-radius: 4px;
+}
+
+.filtros-tabla a {
+  text-decoration:none;
+  border: 1px solid #212121;
+  border-radius: 4px;
+  color: #212121;
+  font-weight: bolder;
+  padding: 15px;
+}
+
+.contenedor-Tfacturas h3{
+  text-align:right;
+  margin: 5px;
+}
+
+
+
+/***********************************/
+#enviar-registro {
+  font-family: "Bebas neue";
+  font-size: 20px;
+  color: red;
+  align-self: center;
+  width: 100px;
+  padding: 5px;
+  background-color: white;
+  border: 2px solid red;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#enviar-registro:hover {
+  color: white;
+  background-color: red;
+  border: 2px solid red;
+}

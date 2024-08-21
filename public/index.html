@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="factura_style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header id="factura-header">
+      <div class="home-buscar">
+        <button class="boton-menu">
+          <p>Iron<span>gym</span></p>
+        </button>
+        <div class="barra-busqueda">
+          <input class="busqueda" placeholder="Buscar..." />
+        </div>
+      </div>
+
+      <div class="perfil">
+        <div class="notificaciones">
+          <div class="avisos">
+            <p>+10</p>
+          </div>
+          <img
+            class="campanita"
+            src="../iconos/notification-bell.svg"
+            title="Notificaciones"
+          />
+        </div>
+        <div class="img-perfil">
+          <img src="../iconos/profile_picture.jpg" />
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <nav>
+        <ul class="apartados-menu">
+          <li>
+            <img src="../iconos/arrow-up.svg" title="Ocultar menú" />
+          </li>
+          <li>
+            <img src="../iconos/home.svg" title="Inicio" />
+          </li>
+          <li>
+            <img src="../iconos/users.svg" title="Clientes" />
+          </li>
+          <li>
+            <img src="../iconos/receipt.svg" title="Facturas" />
+          </li>
+          <li>
+            <img src="../iconos/tags.svg" title="Etiquetas" />
+          </li>
+          <li></li>
+          <li>
+            <img src="../iconos/logout.svg" id="sair" title="Cerrar Sesión" />
+          </li>
+        </ul>
+        <div></div>
+      </nav>
+
+      <section>
+        <div class="navegacion">
+          <h2>Nueva Factura</h2>
+          <a href="/facturacion_2">Registro de Facturas</a>
+        </div>
+
+        <div class="contenido">
+          <div class="customer">
+            <label>Cliente</label>
+            <select>
+              <option selected>Reactial</option>
+              <option>Umizaft</option>
+              <option>Oblong</option>
+            </select>
+
+            <div class="customer-info">
+              <div class="company-details">
+                <h3>Información <img src="../iconos/pencil.svg" /></h3>
+                <p>Reactial Inc.</p>
+                <p>668 12 45 78</p>
+                <p>contact@reactial.com</p>
+                <p>11 Stonepot Road, Clinton</p>
+              </div>
+              <div class="shipping-address">
+                <h3>
+                  Dirección de Facturación <img src="../iconos/pencil.svg" />
+                </h3>
+                <p>Reactial Inc.</p>
+                <p>Vat. No. 8879090</p>
+                <p>11 Stonepot Road</p>
+                <p>Clinton (Hunterdon), NJ 08809</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="invoice">
+            <div class="codigo" name="detalle-factura">
+              <label>Factura #</label>
+              <input id="input-invoice" type="text" />
+            </div>
+
+            <div class="fecha" name="detalle-factura">
+              <label>Fecha</label>
+              <input id="input-date" type="date" />
+            </div>
+
+            <div class="producto" name="detalle-factura">
+              <label>Producto</label>
+              <input id="input-product" type="text" />
+            </div>
+
+            <div class="precio" name="detalle-factura">
+              <label>Precio</label>
+              <input id="input-price" type="text" />
+            </div>
+
+            <div class="cantidad" name="detalle-factura">
+              <label>Cantidad</label>
+              <input id="input-quantity" type="text" />
+            </div>
+
+            <button class="boton-enviar">Confirmar</button>
+          </div>
+        </div>
+
+        <div class="contenedor-tabla">
+          <table class="tabla">
+            <theader>
+              <th>#</th>
+              <th>Fecha</th>
+              <th>Producto</th>
+              <th>Precio</th>
+              <th>Cantidad</th>
+              <th>Total</th>
+            </theader>
+
+            <tbody class="body-tabla"></tbody>
+          </table>
+        </div>
+
+        <button id="enviar-registro" name="boton-enviar-registro">
+          Enviar
+        </button>
+
+        <div class="contenedor-total">
+          <p>TOTAL PEDIDO:</p>
+          <p class="precio-FINAL">0,00</p>
+          <p>Euros (€).</p>
+        </div>
+
+        <div class="archivos">
+          <form id="formulario">
+            <div>
+              <label for="image_uploads">Elija la imagen que desee subir</label>
+
+              <input
+                type="file"
+                name="image_uploads"
+                accept=".jpg, .jpeg, .png"
+                multiple
+              />
+            </div>
+            <div class="preview"></div>
+            <div>
+              <button id="enviar">Subir</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      enviar.addEventListener("click", async (e) => {
+        e.preventDefault();
+
+        let formData = new FormData(formulario);
+        let obxetoAEnviar = {
+          method: "POST",
+          body: new FormData(formulario),
+        };
+
+        let response = await fetch("/upload", obxetoAEnviar);
+
+        let result = await response.json();
+        console.log(result.message);
+      });
+    </script>
+  </body>
+</html>
